@@ -21,7 +21,7 @@ app.set('view engine', 'ejs')
 var upload = multer({
 	storage: multerS3({
 		s3: s3,
-		bucket: 's3trialfirstnode',
+		bucket: 'dev-wearable',
 		key: function (req, file, cb) {
 			console.log(file);
 			cb(null, file.originalname);
